@@ -1,0 +1,120 @@
+|main
+SW[0] => SW[0].IN8
+SW[1] => SW[1].IN1
+KEY[0] => KEY[0].IN8
+HEX0[0] << hexOut:h0.hex
+HEX0[1] << hexOut:h0.hex
+HEX0[2] << hexOut:h0.hex
+HEX0[3] << hexOut:h0.hex
+HEX0[4] << hexOut:h0.hex
+HEX0[5] << hexOut:h0.hex
+HEX0[6] << hexOut:h0.hex
+HEX1[0] << hexOut:h1.hex
+HEX1[1] << hexOut:h1.hex
+HEX1[2] << hexOut:h1.hex
+HEX1[3] << hexOut:h1.hex
+HEX1[4] << hexOut:h1.hex
+HEX1[5] << hexOut:h1.hex
+HEX1[6] << hexOut:h1.hex
+
+
+|main|tflipflop:tf0
+clock => q~reg0.CLK
+Reset_b => q~reg0.ACLR
+t => tnext.IN1
+t => q~reg0.ENA
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+tnext <= tnext.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|tflipflop:tf1
+clock => q~reg0.CLK
+Reset_b => q~reg0.ACLR
+t => tnext.IN1
+t => q~reg0.ENA
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+tnext <= tnext.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|tflipflop:tf2
+clock => q~reg0.CLK
+Reset_b => q~reg0.ACLR
+t => tnext.IN1
+t => q~reg0.ENA
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+tnext <= tnext.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|tflipflop:tf3
+clock => q~reg0.CLK
+Reset_b => q~reg0.ACLR
+t => tnext.IN1
+t => q~reg0.ENA
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+tnext <= tnext.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|tflipflop:tf4
+clock => q~reg0.CLK
+Reset_b => q~reg0.ACLR
+t => tnext.IN1
+t => q~reg0.ENA
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+tnext <= tnext.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|tflipflop:tf5
+clock => q~reg0.CLK
+Reset_b => q~reg0.ACLR
+t => tnext.IN1
+t => q~reg0.ENA
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+tnext <= tnext.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|tflipflop:tf6
+clock => q~reg0.CLK
+Reset_b => q~reg0.ACLR
+t => tnext.IN1
+t => q~reg0.ENA
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+tnext <= tnext.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|tflipflop:tf7
+clock => q~reg0.CLK
+Reset_b => q~reg0.ACLR
+t => tnext.IN1
+t => q~reg0.ENA
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+tnext <= tnext.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|hexOut:h0
+num[0] => Decoder0.IN3
+num[1] => Decoder0.IN2
+num[2] => Decoder0.IN1
+num[3] => Decoder0.IN0
+hex[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+hex[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+hex[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+hex[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+hex[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+hex[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+hex[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|hexOut:h1
+num[0] => Decoder0.IN3
+num[1] => Decoder0.IN2
+num[2] => Decoder0.IN1
+num[3] => Decoder0.IN0
+hex[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+hex[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+hex[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+hex[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+hex[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+hex[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+hex[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,117 @@
+|main
+CLOCK_50 => CLOCK_50.IN1
+SW[0] => SW[0].IN1
+SW[1] => SW[1].IN1
+HEX0[0] <= hexOut:h0.hex
+HEX0[1] <= hexOut:h0.hex
+HEX0[2] <= hexOut:h0.hex
+HEX0[3] <= hexOut:h0.hex
+HEX0[4] <= hexOut:h0.hex
+HEX0[5] <= hexOut:h0.hex
+HEX0[6] <= hexOut:h0.hex
+
+
+|main|mux:m0
+select[0] => Mux0.IN1
+select[1] => Mux0.IN0
+clock => clock.IN1
+reset => reset.IN4
+out[0] <= counter:cr.num
+out[1] <= counter:cr.num
+out[2] <= counter:cr.num
+out[3] <= counter:cr.num
+
+
+|main|mux:m0|clock4:c0
+clock => clockOut~reg0.CLK
+clock => q[0].CLK
+clock => q[1].CLK
+clock => q[2].CLK
+clock => q[3].CLK
+clock => q[4].CLK
+clock => q[5].CLK
+clock => q[6].CLK
+clock => q[7].CLK
+clock => q[8].CLK
+clock => q[9].CLK
+clock => q[10].CLK
+clock => q[11].CLK
+clock => q[12].CLK
+clock => q[13].CLK
+clock => q[14].CLK
+clock => q[15].CLK
+clock => q[16].CLK
+clock => q[17].CLK
+clock => q[18].CLK
+clock => q[19].CLK
+clock => q[20].CLK
+clock => q[21].CLK
+clock => q[22].CLK
+reset => clockOut~reg0.ACLR
+reset => q[0].ACLR
+reset => q[1].ACLR
+reset => q[2].ACLR
+reset => q[3].ACLR
+reset => q[4].ACLR
+reset => q[5].ACLR
+reset => q[6].ACLR
+reset => q[7].ACLR
+reset => q[8].ACLR
+reset => q[9].ACLR
+reset => q[10].ACLR
+reset => q[11].ACLR
+reset => q[12].ACLR
+reset => q[13].ACLR
+reset => q[14].ACLR
+reset => q[15].ACLR
+reset => q[16].ACLR
+reset => q[17].ACLR
+reset => q[18].ACLR
+reset => q[19].ACLR
+reset => q[20].ACLR
+reset => q[21].ACLR
+reset => q[22].ACLR
+clockOut <= clockOut~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|mux:m0|clock2:c1
+clock => q~reg0.CLK
+reset => q~reg0.ACLR
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|mux:m0|clock2:c2
+clock => q~reg0.CLK
+reset => q~reg0.ACLR
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|mux:m0|counter:cr
+clock => num[0]~reg0.CLK
+clock => num[1]~reg0.CLK
+clock => num[2]~reg0.CLK
+clock => num[3]~reg0.CLK
+reset => num[0]~reg0.ACLR
+reset => num[1]~reg0.ACLR
+reset => num[2]~reg0.ACLR
+reset => num[3]~reg0.ACLR
+num[0] <= num[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+num[1] <= num[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+num[2] <= num[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+num[3] <= num[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|hexOut:h0
+num[0] => Decoder0.IN3
+num[1] => Decoder0.IN2
+num[2] => Decoder0.IN1
+num[3] => Decoder0.IN0
+hex[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+hex[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+hex[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+hex[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+hex[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+hex[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+hex[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+

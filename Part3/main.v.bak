@@ -1,0 +1,132 @@
+module main(CLOCK_50, LEDR, SW, KEY);
+input CLOCK_50;
+input [2:0] SW;
+input [1:0] KEY;
+output LEDR;
+
+wire clockRed;
+reg [15:0] code;
+
+clock2 c0(.clock(CLOCK_50), .clockout(clockRed));
+
+always@(posedge KEY[1])
+begin
+	case(key[2:0])
+		3'b000 : code = 16'b1010100000000001;
+		3'b001 : code = 16'b1110000000000001;
+		3'b010 : code = 16'b1010111000000001;
+		3'b011 : code = 16'b1010101110000001;
+		3'b100 : code = 16'b1011101110000001;
+		3'b101 : code = 16'b1110101011100001;
+		3'b110 : code = 16'b1110101110111001;
+		3'b111 : code = 16'b1110111010100001;
+		default: code = 16'b0000000000000000;
+	endcase
+end
+
+
+LSLeft l0(.letter(code[15:0]), .clock(clockRed), .reset(KEY[0]), .out(LEDR));
+
+
+endmodule
+
+module clock2(clock, clockOut);
+input clock;
+reg [24:0] q;
+
+//output reg clockOut;
+output reg clockOut;
+
+always@(posedge clock)
+begin
+	if(q == 24'b1011111010111100001000000)
+	begin
+		q<=0;
+		clockOut <= clockOut + 1;
+	end		
+	else
+		q <= q + 1;
+end
+
+endmodule
+
+
+module LSLeft(letter, clock, reset, out);
+input [15:0] letter;
+
+input reset, clock;
+output out;
+
+wire [15:0] pass;
+
+
+shift s0(.clock(clock), .reset(reset), .loadn(pass[0]), .InR(0), .d(letter[0]), .Out(pass[0]));
+shift s1(.clock(clock), .reset(reset), .loadn(pass[0]), .InR(0), .d(letter[1]), .Out(pass[1]));
+shift s2(.clock(clock), .reset(reset), .loadn(pass[0]), .InR(pass[1]), .d(letter[2]), .Out(pass[2]));
+shift s3(.clock(clock), .reset(reset), .loadn(pass[0]), .InR(pass[2]), .d(letter[3]), .Out(pass[3]));
+shift s4(.clock(clock), .reset(reset), .loadn(pass[0]), .InR(pass[3]), .d(letter[4]), .Out(pass[4]));
+shift s5(.clock(clock), .reset(reset), .loadn(pass[0]), .InR(pass[4]), .d(letter[5]), .Out(pass[5]));
+shift s6(.clock(clock), .reset(reset), .loadn(pass[0]), .InR(pass[5]), .d(letter[6]), .Out(pass[6]));
+shift s7(.clock(clock), .reset(reset), .loadn(pass[0]), .InR(pass[6]), .d(letter[7]), .Out(pass[7]));
+shift s8(.clock(clock), .reset(reset), .loadn(pass[0]), .InR(pass[7]), .d(letter[8]), .Out(pass[8]));
+shift s9(.clock(clock), .reset(reset), .loadn(pass[0]), .InR(pass[8]), .d(letter[9]), .Out(pass[9]));
+shift s10(.clock(clock), .reset(reset), .loadn(pass[0]), .InR(pass[9]), .d(letter[10]), .Out(pass[10]));
+shift s11(.clock(clock), .reset(reset), .loadn(pass[0]), .InR(pass[10]), .d(letter[11]), .Out(pass[11]));
+shift s12(.clock(clock), .reset(reset), .loadn(pass[0]), .InR(pass[11]), .d(letter[12]), .Out(pass[12]));
+shift s13(.clock(clock), .reset(reset), .loadn(pass[0]), .InR(pass[12]), .d(letter[13]), .Out(pass[13]));
+shift s14(.clock(clock), .reset(reset), .loadn(pass[0]), .InR(pass[13]), .d(letter[14]), .Out(pass[14]));
+shift s15(.clock(clock), .reset(reset), .loadn(pass[0]), .InR(pass[14]), .d(letter[15]), .Out(pass[15]));
+
+
+
+
+endmodule
+
+
+
+
+
+
+
+module shift(clock, reset, loadn, InR, d, Out);
+input clock;
+input reset;
+input loadn;
+input InR, d;
+output Out;
+
+wire temp1;
+
+mux2to1 m2(.x(d), .y(InR), .s(loadn), .m(temp1));
+bitregister b1(.clock(clock), .Reset_b(reset), .d(temp1), .q(Out));
+
+endmodule
+
+
+module mux2to1(x, y, s, m);
+    input x; //select 0
+    input y; //select 1
+    input s; //select signal
+    output m; //output
+  
+    assign m = s ? y : x;
+
+endmodule
+
+
+module bitregister(clock, Reset_b, d, q);
+
+	input clock;
+	input Reset_b;
+	input d;
+	output reg q;
+
+	always@(posedge clock or posedge Reset_b)
+	begin
+		if(Reset_b == 1'b1)
+			q<=0;
+		else
+			q<=d;
+	end
+
+endmodule
