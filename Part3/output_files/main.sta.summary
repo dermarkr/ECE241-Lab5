@@ -1,0 +1,117 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1100mV 85C Model Setup 'LSLeft:s0|clock2:c0|clockOut'
+Slack : -7.740
+TNS   : -91.381
+
+Type  : Slow 1100mV 85C Model Setup 'CLOCK_50'
+Slack : -4.877
+TNS   : -82.388
+
+Type  : Slow 1100mV 85C Model Hold 'CLOCK_50'
+Slack : 0.386
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'LSLeft:s0|clock2:c0|clockOut'
+Slack : 0.711
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -0.441
+TNS   : -17.955
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'LSLeft:s0|clock2:c0|clockOut'
+Slack : -0.394
+TNS   : -7.264
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'KEY[1]'
+Slack : -0.394
+TNS   : -5.449
+
+Type  : Slow 1100mV 0C Model Setup 'LSLeft:s0|clock2:c0|clockOut'
+Slack : -7.638
+TNS   : -90.171
+
+Type  : Slow 1100mV 0C Model Setup 'CLOCK_50'
+Slack : -5.016
+TNS   : -82.139
+
+Type  : Slow 1100mV 0C Model Hold 'CLOCK_50'
+Slack : 0.388
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'LSLeft:s0|clock2:c0|clockOut'
+Slack : 0.718
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -0.428
+TNS   : -19.436
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'LSLeft:s0|clock2:c0|clockOut'
+Slack : -0.394
+TNS   : -7.238
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'KEY[1]'
+Slack : -0.394
+TNS   : -5.532
+
+Type  : Fast 1100mV 85C Model Setup 'LSLeft:s0|clock2:c0|clockOut'
+Slack : -4.562
+TNS   : -54.442
+
+Type  : Fast 1100mV 85C Model Setup 'CLOCK_50'
+Slack : -3.025
+TNS   : -35.567
+
+Type  : Fast 1100mV 85C Model Hold 'CLOCK_50'
+Slack : 0.204
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'LSLeft:s0|clock2:c0|clockOut'
+Slack : 0.301
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -0.419
+TNS   : -3.310
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'KEY[1]'
+Slack : -0.307
+TNS   : -3.236
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'LSLeft:s0|clock2:c0|clockOut'
+Slack : 0.103
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'LSLeft:s0|clock2:c0|clockOut'
+Slack : -4.451
+TNS   : -53.213
+
+Type  : Fast 1100mV 0C Model Setup 'CLOCK_50'
+Slack : -2.531
+TNS   : -30.141
+
+Type  : Fast 1100mV 0C Model Hold 'CLOCK_50'
+Slack : 0.193
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'LSLeft:s0|clock2:c0|clockOut'
+Slack : 0.276
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -0.402
+TNS   : -3.290
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'KEY[1]'
+Slack : -0.307
+TNS   : -3.229
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'LSLeft:s0|clock2:c0|clockOut'
+Slack : 0.113
+TNS   : 0.000
+
+------------------------------------------------------------

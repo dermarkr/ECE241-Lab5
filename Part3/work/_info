@@ -1,0 +1,151 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Bob/Desktop/ECE241/Labs/Lab5/Part3
+vbitregister
+Z1 !s110 1540368724
+!i10b 1
+!s100 kgV6me2d7g1;J^=1fYNhZ1
+IPJ2:8nZd4V2bk[V;DiJ;f1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1540367329
+Z4 8main.v
+Z5 Fmain.v
+L0 129
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1540368724.000000
+Z8 !s107 main.v|
+Z9 !s90 -reportprogress|300|main.v|
+!i113 1
+Z10 tCvgOpt 0
+vclock2
+R1
+!i10b 1
+!s100 OcXE5CjJ>0X@[2c:gh3dG2
+IE4GiUY1:T;9@SRzdY20GB1
+R2
+R0
+R3
+R4
+R5
+L0 43
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+vletterselect
+R1
+!i10b 1
+!s100 V<8fBgPBHOSMYBm[3JM[00
+IOQzN:5GL_OA1Mc2ETZne>0
+R2
+R0
+R3
+R4
+R5
+L0 20
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+vLSLeft
+R1
+!i10b 1
+!s100 NTkjRB4nGzmA]?ZbUf]oh1
+IH7KNiUP`7f^k>2O<?;c3_2
+R2
+R0
+R3
+R4
+R5
+L0 68
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+n@l@s@left
+vmain
+R1
+!i10b 1
+!s100 _?USAYZ7DHg@Uz;NE7?9]1
+I0P6<3NZH6YR0Qe1cWaa8h3
+R2
+R0
+R3
+R4
+R5
+L0 1
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+vmux2to1
+R1
+!i10b 1
+!s100 BJ@3o>b6Lm4Q_k@j@Jd6O3
+IKcge4>l?6Wf3VbYPkQ5No0
+R2
+R0
+R3
+R4
+R5
+L0 118
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+vshift
+R1
+!i10b 1
+!s100 icjfPi1mAV?2Q^F_06elD0
+IZgJTj<9do>A6LJ=aA443S1
+R2
+R0
+R3
+R4
+R5
+L0 103
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
